@@ -1,0 +1,11 @@
+.kmap-split { display: flex; flex-wrap: wrap; gap: 16px; }
+.kmap-block-label { font-size: 0.75rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+table.kmap { border-collapse: collapse; margin-top: 4px; font-size: 0.875rem; }
+table.kmap th, table.kmap td {
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  text-align: center;
+}
+table.kmap th { background: var(--panel-soft); color: var(--muted); font-weight: 600; }
+.kmap-corner { font-size: 0.7rem; color: var(--muted); }
+.kmapcell { min-width: 34px; font-weight: 700; }

@@ -1,0 +1,35 @@
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.field label { font-weight: 500; font-size: 0.875rem; color: var(--text); }
+.field select, .field input[type='text'], input[type='text'] {
+  padding: 8px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.9375rem;
+  max-width: 360px;
+  background: var(--panel);
+  color: var(--text);
+}
+input[type='text']:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.term-kind { display: flex; gap: 18px; border: 0; padding: 0; margin: 0 0 12px; }
+.term-kind label { font-weight: 400; display: flex; gap: 6px; align-items: center; cursor: pointer; font-size: 0.9rem; }
+.hint { color: var(--muted); font-size: 0.8125rem; margin: 8px 0 0; }
+.hint code {
+  background: var(--panel-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: 'Google Sans';
+}
+.error {
+  color: var(--bad);
+  background: var(--bad-bg);
+  border-left: 3px solid var(--bad);
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 0.8125rem;
+  margin-top: 8px;
+}

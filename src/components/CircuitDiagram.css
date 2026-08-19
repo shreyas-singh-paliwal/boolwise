@@ -1,0 +1,20 @@
+.circuit-diagram .circuit-svg {
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-width: 280px;
+}
+.circuit-diagram .gate-shape { fill: var(--panel); stroke: var(--wire); stroke-width: 1.75; }
+.circuit-diagram .gate-label { font-size: 10px; font-weight: 700; fill: var(--text); font-family: 'Google Sans', sans-serif; }
+.circuit-diagram .gate-bubble { fill: var(--panel-soft); stroke: var(--accent); stroke-width: 1.75; }
+.circuit-diagram .wire { fill: none; stroke: var(--wire); stroke-width: 1.5; }
+.circuit-diagram .io-dot { fill: var(--wire); }
+.circuit-diagram .io-label { font-size: 13px; font-weight: 500; fill: var(--text); font-family: 'Google Sans', sans-serif; }
+.circuit-diagram .io-label.out { fill: var(--accent); font-weight: 700; }
+.circuit-diagram .const-note {
+  padding: 14px;
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: 600;
+}

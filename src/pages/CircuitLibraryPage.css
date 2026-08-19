@@ -1,0 +1,12 @@
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top:14px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+.intro-card .hint { margin-top: 12px; }
+.combined-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 4px; }
+.combined-note { margin-top: 10px; }

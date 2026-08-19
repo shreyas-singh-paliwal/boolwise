@@ -1,0 +1,22 @@
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+button.primary {
+  background: var(--text);
+  color: var(--bg);
+  border: 0;
+  margin: 10px 0px;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+button.primary:hover { opacity: 0.82; }

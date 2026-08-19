@@ -1,0 +1,21 @@
+.scroll-x { overflow-x: auto; }
+table.tt {
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.875rem;
+}
+table.tt th, table.tt td {
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  text-align: center;
+}
+table.tt th {
+  background: var(--panel-soft);
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+td.v0 { color: var(--bad); background: var(--bad-bg); }
+td.v1 { color: var(--good); background: var(--good-bg); }
+td.vx { color: var(--dc); background: var(--dc-bg); }
+td.outcell { cursor: pointer; font-weight: 700; }

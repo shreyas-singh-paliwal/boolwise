@@ -1,0 +1,3 @@
+
+.circuit-panel{max-width:100%;overflow-x:auto;padding:8px;background:var(--circuit-bg);border-radius:7px;border:1px solid var(--border)}
+.circuit-panel svg{display:block}
