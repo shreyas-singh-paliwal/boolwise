@@ -35,7 +35,7 @@ export default function CircuitLibraryPage() {
           primaryLabel={preset.outputs[0].name}
         />
         <p className="hint combined-note">
-          Each output gets its own minimized expressions and circuits below.
+          
         </p>
       </section>
       
@@ -48,7 +48,7 @@ export default function CircuitLibraryPage() {
           compact
         />
       ))} */}
-
+      <h3>Circuit Implementation</h3>
       <CircuitCanvas nodes={preset.nodes} />
       {
         activeId === 'half-adder' &&

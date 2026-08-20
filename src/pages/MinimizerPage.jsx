@@ -8,8 +8,8 @@ import { truthFromExpression, truthFromTerms } from '../lib/parser';
 import './MinimizerPage.css';
 
 const MODES = [
-  { id: 'truth', label: 'Truth Table' },
   { id: 'expr', label: 'Expression' },
+  { id: 'truth', label: 'Truth Table' },
   { id: 'terms', label: 'Minterms / Maxterms' },
 ];
 
@@ -83,7 +83,7 @@ export default function MinimizerPage() {
         </div>
 
         {mode === 'expr' && <ExpressionForm value={exprValue} onChange={setExprValue} error={exprError} />}
-        
+
         {mode === 'truth' && (
           <div>
             <p className="hint">Click a cell in the Out column to cycle 0 → 1 → X (don&apos;t care).</p>

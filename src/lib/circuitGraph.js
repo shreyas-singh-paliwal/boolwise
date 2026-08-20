@@ -26,7 +26,7 @@ function drawGateNode(n) {
   const { GW, GH, NW, NH, BR } = CIRC
   if (n.gateType === 'NOT') {
     const x = n.x, y = n.y - NH / 2, w = NW, h = NH
-    let out = `<path d="M ${x} ${y} L ${x + w} ${y + h / 2} L ${x} ${y + h} Z" fill="var(--gate-fill)" stroke="var(--accent)" stroke-width="2"/>`
+    let out = `<path d="M ${x} ${y} L ${x + w} ${y + h / 2} L ${x} ${y + h} Z" fill="var(--panel)" stroke="var(--accent)" stroke-width="2"/>`
     out += `<circle cx="${x + w + BR}" cy="${y + h / 2}" r="${BR}" fill="var(--circuit-bg)" stroke="var(--accent)" stroke-width="2"/>`
     return out
   }
@@ -39,7 +39,7 @@ function drawGateNode(n) {
   } else {
     d = `M ${x} ${y} Q ${x + w * 0.55} ${y} ${x + w} ${y + h / 2} Q ${x + w * 0.55} ${y + h} ${x} ${y + h} Q ${x + w * 0.2} ${y + h / 2} ${x} ${y} Z`
   }
-  let out = `<path d="${d}" fill="var(--gate-fill)" stroke="var(--accent)" stroke-width="2"/>`
+  let out = `<path d="${d}" fill="var(--panel)" stroke="var(--accent)" stroke-width="2"/>`
   if (n.gateType === 'XOR') {
     out += `<path d="M ${x - 6} ${y} q ${w * 0.2} ${h / 2} 0 ${h}" fill="none" stroke="var(--accent)" stroke-width="2"/>`
   }
