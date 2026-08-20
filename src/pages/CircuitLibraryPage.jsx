@@ -20,9 +20,7 @@ export default function CircuitLibraryPage() {
       <section className="card intro-card">
         <TabBar tabs={tabs} active={activeId} onChange={setActiveId} />
         <p className="hint">
-          Inputs: {preset.inputs.join(', ')}. Every output bit below is minimized and built into
-          AND/OR/NOT, NAND-only, and NOR-only circuits independently, then verified the same way
-          as the main minimizer.
+          Inputs for {preset.title}: {preset.inputs.join(', ')}
         </p>
       </section>
 
@@ -70,6 +68,18 @@ export default function CircuitLibraryPage() {
             <div className="two-col">
               <div><h4>Sum</h4><div className="expr-box">S = A ⊕ B ⊕ Cin</div></div>
               <div><h4>Carry-out</h4><div className="expr-box">Cout = (A · B) + (Cin · (A ⊕ B))</div></div>
+            </div>
+          </section>
+        )
+      }
+      {
+        activeId === 'half-subtractor' &&
+        (
+          <section className="card">
+            <h3>Expression</h3>
+            <div className="two-col">
+              <div><h4>Difference</h4><div className="expr-box">Diff = A ⊕ B</div></div>
+              <div><h4>Borrow-out</h4><div className="expr-box">Bout = A' · B</div></div>
             </div>
           </section>
         )

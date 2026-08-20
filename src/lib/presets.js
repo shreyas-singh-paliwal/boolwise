@@ -59,7 +59,20 @@ const nodesM = [
   { id: 'P3', kind: 'OUTPUT', label: 'P3', inputs: ['and5'], layer: 4, order: 3 }
 ]
 
-const nodesS = [
+const nodesHS = [
+  { id: 'A', kind: 'INPUT', label: 'A', layer: 0, order: 0 },
+  { id: 'B', kind: 'INPUT', label: 'B', layer: 0, order: 1 },
+
+  { id: 'xor1', kind: 'GATE', gateType: 'XOR', inputs: ['A', 'B'], layer: 1, order: 0 },
+
+  { id: 'not1', kind: 'GATE', gateType: 'NOT', inputs: ['A'], layer: 1, order: 1 },
+  { id: 'and1', kind: 'GATE', gateType: 'AND', inputs: ['not1', 'B'], layer: 2, order: 0 },
+
+  { id: 'D', kind: 'OUTPUT', label: 'Diff', inputs: ['xor1'], layer: 3, order: 0 },
+  { id: 'Bout', kind: 'OUTPUT', label: 'Bout', inputs: ['and1'], layer: 3, order: 1 }
+];
+
+const nodesFS = [
   { id: 'A', kind: 'INPUT', label: 'A', layer: 0, order: 0 },
   { id: 'B', kind: 'INPUT', label: 'B', layer: 0, order: 1 },
   { id: 'Bin', kind: 'INPUT', label: 'Bin', layer: 0, order: 2 },
@@ -109,7 +122,7 @@ export function halfSubtractor() {
       { name: 'Diff', rows: buildOutput(inputs, table, e => e.A ^ e.B) },
       { name: 'Borrow', rows: buildOutput(inputs, table, e => (1 - e.A) & e.B) },
     ],
-    nodes: nodesS,
+    nodes: nodesHS,
   };
 }
 
@@ -125,7 +138,7 @@ export function fullSubtractor() {
         rows: buildOutput(inputs, table, e => ((1 - e.A) & e.B) | ((1 - e.A) & e.Bin) | (e.B & e.Bin)),
       },
     ],
-    nodes: nodesS,
+    nodes: nodesFS,
   };
 }
 
@@ -148,5 +161,4 @@ export function multiplier2x2() {
   };
 }
 
-// halfSubtractor,
-export const ALL_PRESETS = [halfAdder, fullAdder,  fullSubtractor, multiplier2x2];
+export const ALL_PRESETS = [halfAdder, fullAdder, halfSubtractor,fullSubtractor, multiplier2x2];
