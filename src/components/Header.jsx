@@ -8,7 +8,7 @@ export default function Header() {
       <div>
         <h1>BoolWise</h1>
         <p className="subtitle">
-        In Minimizer, enter a function as a truth table, minterms/maxterms, or an expression : get the minimized form and Basic Gates (AND/OR/NOT), NAND-only and NOR-only circuits, all verified against each other.
+        In Minimizer, enter a function as a truth table, minterms/maxterms, or an expression to minimze and analyze the function and related circuits.
         </p>
         <nav className="site-nav">
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
