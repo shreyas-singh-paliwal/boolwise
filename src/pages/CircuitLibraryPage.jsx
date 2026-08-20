@@ -16,7 +16,7 @@ export default function CircuitLibraryPage() {
   
 
   return (
-    <div style={{paddingBottom: '10px'}}>
+    <div>
       <section className="card intro-card">
         <TabBar tabs={tabs} active={activeId} onChange={setActiveId} />
         <p className="hint">

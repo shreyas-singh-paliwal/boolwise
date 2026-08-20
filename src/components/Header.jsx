@@ -15,7 +15,7 @@ export default function Header() {
             Boolean Function Minimizer
           </NavLink>
           <NavLink to="/circuits" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Adders / Subtractors / Multiplier
+            Arithmetic Circuits
           </NavLink>
         </nav>
       </div>

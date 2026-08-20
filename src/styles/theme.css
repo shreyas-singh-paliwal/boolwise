@@ -39,7 +39,7 @@ body {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 h1, h2, h3, h4 { color: var(--text); }
-.shell { max-width: 880px; margin: 0 auto; }
+.shell { max-width: 880px; margin: 0 auto; padding-bottom: 10px;}
 
 @media (prefers-reduced-motion: reduce) {
   body { transition: none; }

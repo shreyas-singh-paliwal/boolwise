@@ -82,18 +82,24 @@ export default function ResultsPanel({ vars, rows, title, compact = false }) {
       <section className="card">
         <h3>AND / OR / NOT Circuit</h3>
         <CircuitDiagram tree={basicTree} />
+        <p className="hint">
+          Gate Count: {countGates(basicTree)} AND/OR/NOT gates used in circuit
+        </p>
       </section>
       <section className="card">
         <h3>NAND-only Circuit</h3>
         <CircuitDiagram tree={nandTree} />
+        <p className="hint">
+          Gate Count: {countGates(nandTree)} NAND gates used in circuit
+        </p>
       </section>
       <section className="card">
         <h3>NOR-only Circuit</h3>
         <CircuitDiagram tree={norTree} />
+        <p className="hint">
+          Gate Count: {countGates(norTree)} NOR gates used in circuit
+        </p>
       </section>
-      <p className="hint">
-        AND/OR/NOT: {countGates(basicTree)} gates · NAND-only: {countGates(nandTree)} gates · NOR-only: {countGates(norTree)} gates
-      </p>
     </section>
   );
 }
